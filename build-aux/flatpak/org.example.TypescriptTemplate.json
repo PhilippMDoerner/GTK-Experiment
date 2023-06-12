@@ -4,13 +4,17 @@
     "runtime-version" : "master",
     "sdk" : "org.gnome.Sdk",
     "sdk-extensions" : [
-        "org.freedesktop.Sdk.Extension.node18"
+        "org.freedesktop.Sdk.Extension.node18",
+        "org.freedesktop.Sdk.Extension.typescript"
     ],
     "tags" : [
         "nightly"
     ],
     "build-options" : {
-        "append-path" : "/usr/lib/sdk/node18/bin"
+        "append-path" : "/usr/lib/sdk/node18/bin:/usr/lib/sdk/typescript/bin",
+        "env": {
+            "npm_config_nodedir": "/usr/lib/sdk/node18"
+        }
     },
     "command" : "org.example.TypescriptTemplate",
     "finish-args" : [
@@ -29,28 +33,12 @@
         "/share/man",
         "/share/pkgconfig",
         "*.la",
-        "*.a",
-        "/app/yarn-mirror"
+        "*.a"
     ],
     "modules" : [
         {
-            "name" : "yarn-deps",
-            "buildsystem" : "simple",
-            "build-commands" : [
-                "/usr/lib/sdk/node18/enable.sh",
-                "mkdir -p /app",
-                "cp -r $FLATPAK_BUILDER_BUILDDIR/flatpak-node/yarn-mirror/ /app"
-            ],
-            "sources" : [
-                "generated-sources.json"
-            ]
-        },
-        {
             "name" : "gnome-typescript-template",
             "buildsystem" : "meson",
-            "config-opts" : [
-                "-Doffline-mirror=/app/yarn-mirror/"
-            ],
             "sources" : [
                 {
                     "type" : "git",
