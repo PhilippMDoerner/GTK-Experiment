@@ -11,10 +11,7 @@
         "nightly"
     ],
     "build-options" : {
-        "append-path" : "/usr/lib/sdk/node18/bin:/usr/lib/sdk/typescript/bin",
-        "env": {
-            "npm_config_nodedir": "/usr/lib/sdk/node18"
-        }
+        "append-path" : "/usr/lib/sdk/node18/bin:/usr/lib/sdk/typescript/bin"
     },
     "command" : "org.example.TypescriptTemplate",
     "finish-args" : [

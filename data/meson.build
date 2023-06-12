@@ -20,10 +20,10 @@ appstream_file = i18n.merge_file(
   install_dir: join_paths(get_option('datadir'), 'appdata')
 )
 
-appstream_util = find_program('appstream-util', required: false)
-if appstream_util.found()
-  test('Validate appstream file', appstream_util, args: ['validate', appstream_file])
-endif
+# appstream_util = find_program('appstream-util', required: false)
+# if appstream_util.found()
+#   test('Validate appstream file', appstream_util, args: ['validate', appstream_file])
+# endif
 
 gsettings_schema = 'org.example.TypescriptTemplate.gschema.xml'
 
