@@ -48,7 +48,7 @@ export class Application extends Adw.Application {
 
         const show_about_action = new Gio.SimpleAction({name: 'about'});
         show_about_action.connect('activate', () => {
-            let aboutParams = {
+            const aboutParams = {
                 transient_for: this.active_window,
                 application_name: 'gnome-typescript-template',
                 application_icon: 'org.example.TypescriptTemplate',
