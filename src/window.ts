@@ -27,17 +27,18 @@ import GObject from 'gi://GObject';
 import Adw from 'gi://Adw';
 
 export class Window extends Adw.ApplicationWindow {
-  static {
-    GObject.registerClass(
-      {
-        Template: 'resource:///org/example/TypescriptTemplate/window.ui',
-        InternalChildren: ['label'],
-      },
-      this
-    );
-  }
+    static {
+        GObject.registerClass(
+            {
+                Template:
+                    'resource:///org/example/TypescriptTemplate/window.ui',
+                InternalChildren: ['label'],
+            },
+            this
+        );
+    }
 
-  constructor(params?: Partial<Adw.ApplicationWindow.ConstructorProperties>) {
-    super(params);
-  }
+    constructor(params?: Partial<Adw.ApplicationWindow.ConstructorProperties>) {
+        super(params);
+    }
 }

@@ -30,51 +30,51 @@ import Adw from 'gi://Adw';
 import { Window } from './window.js';
 
 export class Application extends Adw.Application {
-  private window?: Window;
+    private window?: Window;
 
-  static {
-    GObject.registerClass(this);
-  }
-
-  constructor() {
-    super({
-      application_id: 'org.example.TypescriptTemplate',
-      flags: Gio.ApplicationFlags.DEFAULT_FLAGS,
-    });
-
-    const quit_action = new Gio.SimpleAction({ name: 'quit' });
-    quit_action.connect('activate', () => {
-      this.quit();
-    });
-    this.add_action(quit_action);
-    this.set_accels_for_action('app.quit', ['<primary>q']);
-
-    const show_about_action = new Gio.SimpleAction({ name: 'about' });
-    show_about_action.connect('activate', () => {
-      const aboutParams = {
-        transient_for: this.active_window,
-        application_name: 'gnome-typescript-template',
-        application_icon: 'org.example.TypescriptTemplate',
-        developer_name: 'Christopher Davis',
-        version: '0.1.0',
-        developers: ['Christopher Davis <christopherdavis@gnome.org>'],
-        copyright: '© 2023 Christopher Davis',
-      };
-      const aboutWindow = new Adw.AboutWindow(aboutParams);
-      aboutWindow.present();
-    });
-    this.add_action(show_about_action);
-  }
-
-  public vfunc_activate(): void {
-    if (!this.window) {
-      this.window = new Window({ application: this });
+    static {
+        GObject.registerClass(this);
     }
 
-    this.window.present();
-  }
+    constructor() {
+        super({
+            application_id: 'org.example.TypescriptTemplate',
+            flags: Gio.ApplicationFlags.DEFAULT_FLAGS,
+        });
+
+        const quit_action = new Gio.SimpleAction({ name: 'quit' });
+        quit_action.connect('activate', () => {
+            this.quit();
+        });
+        this.add_action(quit_action);
+        this.set_accels_for_action('app.quit', ['<primary>q']);
+
+        const show_about_action = new Gio.SimpleAction({ name: 'about' });
+        show_about_action.connect('activate', () => {
+            const aboutParams = {
+                transient_for: this.active_window,
+                application_name: 'gnome-typescript-template',
+                application_icon: 'org.example.TypescriptTemplate',
+                developer_name: 'Christopher Davis',
+                version: '0.1.0',
+                developers: ['Christopher Davis <christopherdavis@gnome.org>'],
+                copyright: '© 2023 Christopher Davis',
+            };
+            const aboutWindow = new Adw.AboutWindow(aboutParams);
+            aboutWindow.present();
+        });
+        this.add_action(show_about_action);
+    }
+
+    public vfunc_activate(): void {
+        if (!this.window) {
+            this.window = new Window({ application: this });
+        }
+
+        this.window.present();
+    }
 }
 
 export function main(argv: string[]): number {
-  return new Application().run(argv);
+    return new Application().run(argv);
 }
