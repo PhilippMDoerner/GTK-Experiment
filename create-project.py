@@ -85,7 +85,7 @@ files_with_content_to_rename = [
     Path("data") / "org.example.TypescriptTemplate.metainfo.xml.in",
     Path("data") / "org.example.TypescriptTemplate.data.gresource.xml",
     Path("data") / "window.ui",
-    Path("po") / "POTFILES",
+    Path("po") / "POTFILES.in",
     Path("po") / "meson.build",
     Path("src") / "main.ts",
     Path("src") / "meson.build",
