@@ -29,7 +29,7 @@ $ python3 create-project.py
 The script will ask you for your project name, application id, and author information and then
 replace the placeholder values in the template with the values you provide. Once finished,
 you will find a folder with the project name you gave the script in the template repo. Move
-this folder to whereever you store your projects.
+this folder to wherever you store your projects.
 
 ## Setting Up Your Development Environment
 
