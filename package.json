@@ -1,6 +1,6 @@
 {
   "name": "gnome-typescript-template",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Template for writing GNOME applications in TypeScript",
   "main": "src/main.ts",
   "repository": "https://gitlab.gnome.org/BrainBlasted/gnome-typescript-template",
