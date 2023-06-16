@@ -47,6 +47,14 @@ export class Window extends Adw.ApplicationWindow {
             },
             this
         );
+
+        // Widgets allow you to directly add shortcuts to them when subclassing
+        Gtk.Widget.add_shortcut(
+            new Gtk.Shortcut({
+                action: new Gtk.NamedAction({ action_name: 'window.close' }),
+                trigger: Gtk.ShortcutTrigger.parse_string('<Control>w'),
+            })
+        );
     }
 
     constructor(params?: Partial<Adw.ApplicationWindow.ConstructorProperties>) {
