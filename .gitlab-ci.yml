@@ -15,7 +15,7 @@ flatpak:
     APP_ID: "org.example.TypescriptTemplate"
   extends: .flatpak
   before_script:
-    - flatpak --user install -y org.freedesktop.Sdk.Extension.node18//22.08 org.freedesktop.Sdk.Extension.typescript//22.08
+    - flatpak --user install -y org.freedesktop.Sdk.Extension.node18//23.08beta org.freedesktop.Sdk.Extension.typescript//23.08beta
 
 eslint:
   image: quay.io/fedora/fedora:latest
