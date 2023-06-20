@@ -53,6 +53,7 @@ In a terminal, run:
 
 ```
 $ flatpak remote-add --user --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+$ flatpak remote-add --user --if-not-exists flathub-beta https://flathub.org/beta-repo/flathub-beta.flatpakrepo
 $ flatpak remote-add --user --if-not-exists gnome-nightly https://nightly.gnome.org/gnome-nightly.flatpakrepo
 ```
 
@@ -60,7 +61,7 @@ Then install the SDKs and extensions:
 
 ```
 $ flatpak --user install org.gnome.Sdk//master org.gnome.Platform//master
-$ flatpak --user install org.freedesktop.Sdk.Extension.node18//22.08 org.freedesktop.Sdk.Extension.typescript//22.08
+$ flatpak --user install org.freedesktop.Sdk.Extension.node18//23.08beta org.freedesktop.Sdk.Extension.typescript//23.08beta
 ```
 
 Also ensure that you have `flatpak-builder` installed.
