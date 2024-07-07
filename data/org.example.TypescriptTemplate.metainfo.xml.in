@@ -22,6 +22,9 @@
         https://gitlab.gnome.org/BrainBlasted/gnome-typescript-template/raw/HEAD/data/screenshots/screenshot-2.png</image>
     </screenshot>
   </screenshots>
+  <categories>
+    <category>GNOME</category>
+  </categories>
   <!-- IMPORTANT: Use https://hughsie.github.io/oars/generate.html to generate before publishing
   your app -->
   <content_rating type="oars-1.1" />
