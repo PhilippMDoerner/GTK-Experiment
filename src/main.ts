@@ -71,8 +71,7 @@ export class Application extends Adw.Application {
 
         const show_about_action = new Gio.SimpleAction({ name: 'about' });
         show_about_action.connect('activate', () => {
-            const aboutWindow = new Adw.AboutWindow({
-                transient_for: this.active_window,
+            const aboutDialog = new Adw.AboutDialog({
                 application_name: _('Typescript Template'),
                 application_icon: 'org.example.TypescriptTemplate',
                 developer_name: 'Christopher Davis',
@@ -81,7 +80,7 @@ export class Application extends Adw.Application {
                 copyright: '© 2023 Christopher Davis',
             });
 
-            aboutWindow.present();
+            aboutDialog.present(this.active_window);
         });
 
         this.add_action(show_about_action);
