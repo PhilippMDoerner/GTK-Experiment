@@ -82,18 +82,8 @@ export class Window extends Adw.ApplicationWindow {
 
                 const launcher = new Gtk.UriLauncher({ uri: link });
 
-                /**
-                 * NOTE: The Typescript definition generator is not perfect,
-                 * so you may see cases like this. We disable ESLint because
-                 * we know for sure that this function exists, takes these
-                 * arguments, and returns the right values.
-                 */
-
-                /* eslint-disable @typescript-eslint/no-unsafe-call */
-                /* eslint-disable @typescript-eslint/no-unsafe-member-access */
                 launcher
                     .launch(this, null)
-                    // @ts-expect-error GtkUriLauncher.launch isn't properly generated in our type defs
                     .then(() => {
                         const toast = new Adw.Toast({
                             title: _('Opened link'),
