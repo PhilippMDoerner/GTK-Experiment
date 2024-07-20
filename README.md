@@ -61,7 +61,7 @@ Then install the SDKs and extensions:
 
 ```
 $ flatpak --user install org.gnome.Sdk//master org.gnome.Platform//master
-$ flatpak --user install org.freedesktop.Sdk.Extension.node18//23.08beta org.freedesktop.Sdk.Extension.typescript//23.08beta
+$ flatpak --user install org.freedesktop.Sdk.Extension.node20//24.08beta org.freedesktop.Sdk.Extension.typescript//24.08beta
 ```
 
 Also ensure that you have `flatpak-builder` installed.
