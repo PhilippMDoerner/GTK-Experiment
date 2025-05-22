@@ -93,12 +93,16 @@ To build the application, run:
 
 ```
 $ flatpak-builder --user flatpak_app build-aux/flatpak/<application_id>.json
+# npm shortcut for that command
+$ npm run build:fp
 ```
 
 And to run the application:
 
 ```
 $ flatpak-builder --run flatpak_app build-aux/flatpak/<application_id>.json
+# npm shortcut for that command
+$ npm run run
 ```
 
 ## References
