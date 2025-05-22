@@ -2,10 +2,10 @@
 <gresources>
   <gresource prefix="/org/example/TypescriptTemplate/js">
     <file>main.js</file>
-    <file>window/window.js</file>
+    <file>window.js</file>
   </gresource>
   <gresource prefix="/org/example/TypescriptTemplate">
-    <file preprocess="xml-stripblanks">window/window.ui</file>
+    <file preprocess="xml-stripblanks">window.ui</file>
     <file preprocess="xml-stripblanks">gtk/help-overlay.ui</file>
   </gresource>
 </gresources>

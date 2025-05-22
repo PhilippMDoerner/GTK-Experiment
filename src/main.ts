@@ -3,7 +3,7 @@ import Gio from "gi://Gio";
 import GObject from "gi://GObject";
 import Gtk from "gi://Gtk?version=4.0";
 
-import { Window } from "./window/window.js";
+import { Window } from "./window.js";
 
 /**
  * This class is the foundation of most complex applications.

@@ -57,7 +57,7 @@ export class Window extends Adw.ApplicationWindow {
         );
     }
 
-    constructor(params?: Partial<Adw.ApplicationWindow.ConstructorProperties>) {
+    constructor(params?: Partial<Adw.ApplicationWindow.ConstructorProps>) {
         super(params);
 
         /**
