@@ -19,6 +19,8 @@
     },
     "scripts": {
         "build": "tsc --strict",
-        "typecheck": "tsc --strict --noEmit"
+        "typecheck": "tsc --strict --noEmit",
+        "build:fp": "flatpak-builder --force-clean --user flatpak_app build-aux/flatpak/org.example.TypescriptTemplate.json",
+        "run": "flatpak-builder --run flatpak_app build-aux/flatpak/org.example.TypescriptTemplate.json org.example.TypescriptTemplate"
     }
 }
