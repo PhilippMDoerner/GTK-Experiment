@@ -8,12 +8,12 @@ A template that provides the basic foundations for GNOME applications written in
 
 This template provides:
 
-* A main window using modern libadwaita widgets and best practices
-* A starting point for metadata, desktop files, and icons
-* A flatpak manifest for nightly builds
-* A GitLab CI configuration that produces flatpak bundles
-* A stub for translation support
-* Thoroughly commented code to assist with learning
+- A main window using modern libadwaita widgets and best practices
+- A starting point for metadata, desktop files, and icons
+- A flatpak manifest for nightly builds
+- A GitLab CI configuration that produces flatpak bundles
+- A stub for translation support
+- Thoroughly commented code to assist with learning
 
 ## Getting Started
 
@@ -38,12 +38,12 @@ this folder to wherever you store your projects.
 When working with Typescript, I currently recommend using [Visual Studio Code](https://flathub.org/apps/com.visualstudio.code).
 VSCode has many well-supported extensions for JavaScript and TypeScript. You will need the following extensions in VSCode:
 
-* ESLint by Microsoft
-* Prettier ESLint by Rebecca Vest
-* Flatpak by Bilal Elmoussaoui
-* XML by Red Hat
-* EditorConfig for VS Code by EditorConfig
-* Meson by mesonbuild
+- ESLint by Microsoft
+- Prettier ESLint by Rebecca Vest
+- Flatpak by Bilal Elmoussaoui
+- XML by Red Hat
+- EditorConfig for VS Code by EditorConfig
+- Meson by mesonbuild
 
 ### Flatpak
 
@@ -61,7 +61,7 @@ Then install the SDKs and extensions:
 
 ```
 $ flatpak --user install org.gnome.Sdk//master org.gnome.Platform//master
-$ flatpak --user install org.freedesktop.Sdk.Extension.node20//24.08beta org.freedesktop.Sdk.Extension.typescript//24.08beta
+$ flatpak --user install org.freedesktop.Sdk.Extension.node20//24.08 org.freedesktop.Sdk.Extension.typescript//24.08
 ```
 
 Also ensure that you have `flatpak-builder` installed.
@@ -98,14 +98,14 @@ $ flatpak-builder --user flatpak_app build-aux/flatpak/<application_id>.json
 And to run the application:
 
 ```
-$ flatpak-builder --run flatpak_app build-aux/flatpak/<application_id>.json
+$ flatpak-builder --run flatpak_app build-aux/flatpak/<application_id>.json <application_id>
 ```
 
 ## References
 
 For the next steps in your application development journey, visit the following links:
 
-* Read our [Developer Documentation](https://developer.gnome.org/documentation/) for tutorials and references.
-* Read our [Human Interface Guidelines](https://developer.gnome.org/hig/) to learn the best practices for designing a GNOME application.
-* Visit [gjs.guide](https://gjs.guide/) for a comprehensive overview of GJS.
-* If you plan to host your repo on GitHub, set up [flatpak-github-actions](https://github.com/flatpak/flatpak-github-actions).
+- Read our [Developer Documentation](https://developer.gnome.org/documentation/) for tutorials and references.
+- Read our [Human Interface Guidelines](https://developer.gnome.org/hig/) to learn the best practices for designing a GNOME application.
+- Visit [gjs.guide](https://gjs.guide/) for a comprehensive overview of GJS.
+- If you plan to host your repo on GitHub, set up [flatpak-github-actions](https://github.com/flatpak/flatpak-github-actions).
