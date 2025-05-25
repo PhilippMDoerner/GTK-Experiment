@@ -3,6 +3,7 @@ import Gio from 'gi://Gio';
 import GObject from 'gi://GObject';
 import Gtk from 'gi://Gtk?version=4.0';
 
+import { load_widgets } from './widget_registry.js';
 import { Window } from './window.js';
 
 /**
@@ -99,8 +100,8 @@ export class Application extends Adw.Application {
 }
 
 export function main(argv: string[]): Promise<number> {
+    load_widgets();
     const app = new Application();
-    // @ts-expect-error gi.ts can't generate this, but it exists.
     // eslint-disable-next-line @typescript-eslint/no-unsafe-call, @typescript-eslint/no-unsafe-return
     return app.runAsync(argv);
 }

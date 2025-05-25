@@ -1,27 +1,27 @@
 {
-    "id" : "org.example.TypescriptTemplate",
-    "runtime" : "org.gnome.Platform",
-    "runtime-version" : "master",
-    "sdk" : "org.gnome.Sdk",
-    "sdk-extensions" : [
+    "id": "org.example.TypescriptTemplate",
+    "runtime": "org.gnome.Platform",
+    "runtime-version": "master",
+    "sdk": "org.gnome.Sdk",
+    "sdk-extensions": [
         "org.freedesktop.Sdk.Extension.node20",
         "org.freedesktop.Sdk.Extension.typescript"
     ],
-    "tags" : [
+    "tags": [
         "nightly"
     ],
-    "build-options" : {
-        "append-path" : "/usr/lib/sdk/node20/bin:/usr/lib/sdk/typescript/bin"
+    "build-options": {
+        "append-path": "/usr/lib/sdk/node20/bin:/usr/lib/sdk/typescript/bin"
     },
-    "command" : "org.example.TypescriptTemplate",
-    "finish-args" : [
+    "command": "org.example.TypescriptTemplate",
+    "finish-args": [
         "--share=ipc",
         "--device=dri",
         "--socket=wayland",
         "--socket=fallback-x11",
         "--env=GJS_DISABLE_JIT=1"
     ],
-    "cleanup" : [
+    "cleanup": [
         "/include",
         "/lib/pkgconfig",
         "/man",
@@ -32,14 +32,14 @@
         "*.la",
         "*.a"
     ],
-    "modules" : [
+    "modules": [
         {
-            "name" : "gnome-typescript-template",
-            "buildsystem" : "meson",
-            "sources" : [
+            "name": "mine",
+            "buildsystem": "meson",
+            "sources": [
                 {
-                    "type" : "git",
-                    "url" : "."
+                    "type": "dir",
+                    "path": "../../"
                 }
             ]
         }

@@ -1,6 +1,7 @@
 gnome = import('gnome')
 
 sources = files(
+  'widget_registry.ts',
   'main.ts',
   'window.ts',
 )
@@ -11,7 +12,7 @@ typescript = custom_target(
   'typescript-compile',
   input: sources,
   build_by_default: true,
-  build_always_stale: true,
+  build_always_stale: false,
   command: [ tsc, '--outDir', tsc_out ],
   output: ['tsc-output'],
 )
@@ -46,5 +47,5 @@ app_launcher = configure_file(
 run_target(
   'devel',
   command: [gjs_console, '-m', app_launcher],
-  depends: [src_res, data_res, compile_local_schemas]
+  depends: [src_res, compile_local_schemas]
 )

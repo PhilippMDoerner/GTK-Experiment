@@ -26,7 +26,8 @@
               <object class="AdwStatusPage" id="statusPage">
                 <property name="icon-name">org.example.TypescriptTemplate-symbolic</property>
                 <property name="title" translatable="yes">Welcome to Typescript Template</property>
-                <property name="description" translatable="yes">Use this template to build your GNOME + Typescript application</property>
+                <property name="description" translatable="yes">Use this template to build your
+                  GNOME + Typescript application</property>
                 <child>
                   <object class="GtkBox">
                     <property name="orientation">vertical</property>
@@ -40,7 +41,7 @@
                         <property name="can-shrink">True</property>
                         <property name="halign">center</property>
                         <style>
-                          <class name="pill"/>
+                          <class name="pill" />
                         </style>
                       </object>
                     </child>
@@ -53,7 +54,7 @@
                         <property name="can-shrink">True</property>
                         <property name="halign">center</property>
                         <style>
-                          <class name="pill"/>
+                          <class name="pill" />
                         </style>
                       </object>
                     </child>
@@ -66,7 +67,7 @@
                         <property name="can-shrink">True</property>
                         <property name="halign">center</property>
                         <style>
-                          <class name="pill"/>
+                          <class name="pill" />
                         </style>
                       </object>
                     </child>
@@ -82,9 +83,9 @@
   <object class="GtkSizeGroup">
     <property name="mode">horizontal</property>
     <widgets>
-      <widget name="dev_btn"/>
-      <widget name="hig_btn"/>
-      <widget name="gjs_btn"/>
+      <widget name="dev_btn" />
+      <widget name="hig_btn" />
+      <widget name="gjs_btn" />
     </widgets>
   </object>
   <menu id="primary_menu">

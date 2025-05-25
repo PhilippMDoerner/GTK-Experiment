@@ -1,0 +1,6 @@
+#!/bin/sh
+if [ -z "$1" ]; then
+  echo "Usage: $0 <WidgetName>"
+  exit 1
+fi
+python3 build-aux/gen_widget.py "$1"

@@ -66,6 +66,7 @@ items_to_copy = [
     Path("package.json"),
     Path("README.md"),
     Path("tsconfig.json"),
+    Path("gjst")
 ]
 
 for item in items_to_copy:
@@ -78,18 +79,18 @@ for item in items_to_copy:
 
 files_with_content_to_rename = [
     Path("build-aux") / "flatpak" / "org.example.TypescriptTemplate.json",
+    Path("build-aux") / "gen_widget.py",
     Path("data") / "icons" / "meson.build",
     Path("data") / "meson.build",
     Path("data") / "org.example.TypescriptTemplate.desktop.in",
     Path("data") / "org.example.TypescriptTemplate.gschema.xml",
     Path("data") / "org.example.TypescriptTemplate.metainfo.xml.in",
-    Path("data") / "org.example.TypescriptTemplate.data.gresource.xml",
-    Path("data") / "window.ui",
     Path("po") / "POTFILES.in",
     Path("po") / "meson.build",
     Path("src") / "main.ts",
     Path("src") / "meson.build",
     Path("src") / "org.example.TypescriptTemplate.src.gresource.xml",
+    Path("src") / "window.ui",
     Path("src") / "window.ts",
     Path(".gitlab-ci.yml"),
     Path("meson.build"),
@@ -122,7 +123,6 @@ files_to_rename = [
     Path("data") / "org.example.TypescriptTemplate.desktop.in",
     Path("data") / "org.example.TypescriptTemplate.gschema.xml",
     Path("data") / "org.example.TypescriptTemplate.metainfo.xml.in",
-    Path("data") / "org.example.TypescriptTemplate.data.gresource.xml",
     Path("src") / "org.example.TypescriptTemplate.in",
     Path("src") / "org.example.TypescriptTemplate.src.gresource.xml",
 ]
